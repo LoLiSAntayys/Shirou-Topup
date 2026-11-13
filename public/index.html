@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#11100f">
+    <meta name="description" content="Pilih paket diamond Mobile Legends dan buat order top-up di Shirou.">
+    <title>Shirou Top-Up — MLBB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Shirou Top-Up beranda">
+        <span class="brand-mark">S</span>
+        <span>SHIROU<span class="brand-accent">.</span></span>
+      </a>
+      <nav class="top-nav" aria-label="Navigasi utama">
+        <a href="#order">Top Up</a>
+        <a href="#cara-kerja">Cara kerja</a>
+        <a href="#lacak">Cek order</a>
+      </nav>
+      <a class="header-pill" href="#order"><span class="status-dot"></span> MLBB</a>
+    </header>
+
+    <main>
+      <section class="hero page-shell">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> MOBILE LEGENDS: BANG BANG</div>
+          <h1>Push rank.<br><span>Top up</span> sat-set.</h1>
+          <p>Pilih diamond, masukin ID game, lalu buat order. Simpel dan jelas dari awal sampai selesai.</p>
+          <a class="primary-link" href="#order">Pilih diamond <span aria-hidden="true">↘</span></a>
+          <div class="hero-proof">
+            <div class="proof-avatar">✦</div>
+            <div><strong>Order yang jelas</strong><small>Detail paket dan status tersimpan</small></div>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Ilustrasi diamond">
+          <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+          <div class="diamond diamond-back"></div>
+          <div class="diamond diamond-main"><span>✦</span></div>
+          <div class="floating-tag tag-top">MLBB <span>•</span> TOP UP</div>
+          <div class="floating-tag tag-bottom"><span class="tag-spark">✧</span> INSTANT VIBES</div>
+          <div class="art-caption">YOUR NEXT<br><b>POWER SPIKE</b></div>
+        </div>
+      </section>
+
+      <section class="shop-section page-shell" id="order">
+        <div class="section-heading">
+          <div><div class="eyebrow"><span class="eyebrow-line"></span> MULAI DI SINI</div><h2>Pilih diamond<span>.</span></h2></div>
+          <div class="catalog-label"><span class="live-dot"></span> KATALOG MLBB</div>
+        </div>
+        <div class="shop-grid">
+          <section class="packages-panel" aria-labelledby="package-title">
+            <div class="panel-topline"><h3 id="package-title">Paket populer</h3><span>01 / 02</span></div>
+            <div id="package-list" class="package-list" aria-live="polite">
+              <div class="loading-card">Lagi ambil katalog<span class="loading-dots">...</span></div>
+            </div>
+            <p class="demo-note">Harga pada katalog ini masih contoh dan perlu disesuaikan dengan supplier sebelum transaksi nyata.</p>
+          </section>
+
+          <section class="order-panel" aria-labelledby="detail-title">
+            <div class="panel-topline"><h3 id="detail-title">Detail akun</h3><span>02 / 02</span></div>
+            <form id="order-form">
+              <label for="player-id">User ID</label>
+              <input id="player-id" name="playerId" inputmode="numeric" autocomplete="off" placeholder="Contoh: 123456789" required minlength="4" maxlength="20">
+              <label for="server-id">Zone / Server ID</label>
+              <input id="server-id" name="serverId" inputmode="numeric" autocomplete="off" placeholder="Contoh: 1234" required maxlength="10">
+              <label for="email">Email <span class="optional">(opsional)</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="Buat menerima detail order">
+              <div class="order-summary" id="order-summary">
+                <div><span>Paket</span><strong id="summary-package">Pilih paket dulu</strong></div>
+                <div><span>Total</span><strong id="summary-price">—</strong></div>
+              </div>
+              <button class="submit-button" type="submit" id="submit-order" disabled>Buat order <span aria-hidden="true">↗</span></button>
+              <p class="form-footnote">Belum ada pembayaran yang diproses di versi ini.</p>
+              <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+            </form>
+          </section>
+        </div>
+      </section>
+
+      <section class="steps-section page-shell" id="cara-kerja">
+        <div class="steps-intro">
+          <div class="eyebrow"><span class="eyebrow-line"></span> TANPA RIBET</div>
+          <h2>Tiga langkah.<br><span>Satu tujuan.</span></h2>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card"><span class="step-number">01</span><div class="step-icon">◇</div><h3>Pilih paket</h3><p>Temukan jumlah diamond yang pas buat kebutuhanmu.</p></article>
+          <article class="step-card"><span class="step-number">02</span><div class="step-icon">⌖</div><h3>Isi ID game</h3><p>Pastikan User ID dan Zone ID benar sebelum lanjut.</p></article>
+          <article class="step-card"><span class="step-number">03</span><div class="step-icon">↗</div><h3>Simpan order</h3><p>Kode order dibuat. Pembayaran online menyusul setelah provider terhubung.</p></article>
+        </div>
+      </section>
+
+      <section class="track-section page-shell" id="lacak">
+        <div class="track-card">
+          <div><div class="eyebrow"><span class="eyebrow-line"></span> SUDAH PUNYA KODE?</div><h2>Lacak order<span>.</span></h2><p>Masukkan kode order untuk melihat status terakhir.</p></div>
+          <form id="track-form" class="track-form">
+            <label class="sr-only" for="order-code">Kode order</label>
+            <input id="order-code" name="orderCode" placeholder="SHR-XXXXXXXXXX" autocomplete="off" required>
+            <button type="submit">Cek status <span aria-hidden="true">→</span></button>
+            <p class="track-message" id="track-message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+      <div class="global-message" id="global-message" role="status" aria-live="polite"></div>
+    </main>
+
+    <footer class="site-footer page-shell">
+      <a class="brand footer-brand" href="/"><span class="brand-mark">S</span><span>SHIROU<span class="brand-accent">.</span></span></a>
+      <p>Made for the next match.</p>
+      <span>© <span id="year"></span> Shirou Top-Up</span>
+    </footer>
+  </body>
+</html>
